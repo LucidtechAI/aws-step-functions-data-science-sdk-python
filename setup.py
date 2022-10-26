@@ -30,8 +30,8 @@ def read_version():
 
 # Declare minimal set for installation
 required_packages = [
-    "boto3>=1.14.38",
-    "pyyaml"
+    "boto3==1.24.12",
+    "PyYAML==6.0"
 ]
 
 # enum is introduced in Python 3.4. Installing enum back port
