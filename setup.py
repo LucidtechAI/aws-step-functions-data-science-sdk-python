@@ -30,7 +30,7 @@ def read_version():
 
 # Declare minimal set for installation
 required_packages = [
-    "boto3==1.35.15",
+    "boto3>=1.34.131",
     "PyYAML~=6.0"
 ]
 
