@@ -12,6 +12,7 @@
 # permissions and limitations under the License.
 from __future__ import absolute_import
 
+import importlib
 import os
 import sys
 from datetime import datetime
@@ -49,6 +50,7 @@ MOCK_MODULES = [
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 project = u"stepfunctions"
+version = importlib.metadata.version(project)
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.

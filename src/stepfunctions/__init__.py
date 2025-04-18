@@ -12,9 +12,11 @@
 # permissions and limitations under the License.
 from __future__ import absolute_import
 
+import importlib
 import logging
 import sys
 
+__version__ = importlib.metadata.version("stepfunctions")
 __useragent__ = "aws-step-functions-data-science-sdk-python"
 
 # disable logging.warning() from import packages
