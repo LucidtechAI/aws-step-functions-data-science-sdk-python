@@ -13,9 +13,9 @@
 from __future__ import absolute_import
 
 import os
-import pkg_resources
 import sys
 from datetime import datetime
+from importlib.metadata import version as importlib_version
 from unittest.mock import MagicMock
 
 class Mock(MagicMock):
@@ -50,7 +50,7 @@ MOCK_MODULES = [
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 project = u"stepfunctions"
-version = pkg_resources.require(project)[0].version
+version = importlib_version(project)
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.

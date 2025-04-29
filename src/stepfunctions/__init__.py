@@ -13,10 +13,11 @@
 from __future__ import absolute_import
 
 import logging
-import pkg_resources
 import sys
 
-__version__ = pkg_resources.require("stepfunctions")[0].version
+from importlib.metadata import version as importlib_version
+
+__version__ = importlib_version("stepfunctions")
 __useragent__ = "aws-step-functions-data-science-sdk-python"
 
 # disable logging.warning() from import packages
